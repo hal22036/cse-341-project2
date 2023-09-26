@@ -1,0 +1,64 @@
+[{
+  "_id": {"$oid": "58e921f6028954d4f0778e7f"},
+  "student_id": 157,
+  "firstName": "Janet",
+  "lastName": "Smith",
+  "email": "student@test.com",
+  "birthday": "12/22/2011",
+  "gpa": 3.75
+},
+{
+  "_id": {"$oid": "61a921f6028954d4f0319e6e"},
+  "student_id": 101,
+  "firstName": "Blake",
+  "lastName": "Clayton",
+  "email": "blake@test.com",
+  "birthday": "10/2/2010",
+  "gpa": 3.0
+},
+{
+  "_id": {"$oid": "65131734e03f0bdbbde3d1bb"},
+  "student_id": 234,
+  "firstName": "Aspen",
+  "lastName": "Myler",
+  "email": "aspen@test.com",
+  "birthday": "1/24/2013",
+  "gpa": 3.5
+},
+{
+  "_id": {"$oid": "65131752e03f0bdbbde3d1bc"},
+  "student_id": 189,
+  "firstName": "Chad",
+  "lastName": "Porter",
+  "email": "chad@test.com",
+  "birthday": "7/4/2011",
+  "gpa": 2.75
+},
+{
+  "_id": {"$oid": "65131777e03f0bdbbde3d1bd"},
+  "student_id": 295,
+  "firstName": "Olive",
+  "lastName": "Angel",
+  "email": "olive@test.com",
+  "birthday": "8/25/2015",
+  "gpa": 4.0
+},
+{
+  "_id": {"$oid": "65131797e03f0bdbbde3d1be"},
+  "student_id": 122,
+  "firstName": "Cory",
+  "lastName": "George",
+  "email": "cory@test.com",
+  "birthday": "2/22/2012",
+  "gpa": 3.45
+},
+{
+  "_id": {"$oid": "651317aee03f0bdbbde3d1bf"},
+  "student_id": 151,
+  "firstName": "Harley",
+  "lastName": "Hill",
+  "email": "harley@test.com",
+  "birthday": "6/12/2011",
+  "gpa": 3.5
+}
+]

@@ -1,0 +1,38 @@
+//LOCALHOST
+### Get all teachers
+GET http://localhost:3000/teachers
+
+### Get teacher by id
+GET http://localhost:3000/teachers/651317eee03f0bdbbde3d1c1
+
+### Create teacher
+POST http:://localhost:3000/teachers HTTP/1.1
+content-type: application/json
+
+{
+    "faculty_id": 12,
+    "firstName": "Jacob",
+    "lastName": "Mocker",
+    "email": "teacher@test.com",
+    "subject": "Math",
+    "yearsTeaching": 4
+}
+
+### PUT teacher
+PUT http://localhost:3000/teachers/651317eee03f0bdbbde3d1c1 HTTP/1.1
+content-type: application/json
+
+{
+    "faculty_id": 12,
+    "firstName": "Jacob",
+    "lastName": "Mocker",
+    "email": "teacher@test.com",
+    "subject": "Math",
+    "yearsTeaching": 4
+}
+
+### DELETE teacher
+DELETE http://localhost:3000/teachers/651317eee03f0bdbbde3d1c1 HTTP/1.1
+
+
+

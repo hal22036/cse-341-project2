@@ -1,0 +1,24 @@
+[
+    {
+    "_id": {
+      "$oid": "651317eee03f0bdbbde3d1c1"
+    },
+    "faculty_id": 12,
+    "firstName": "Jacob",
+    "lastName": "Mocker",
+    "email": "teacher@test.com",
+    "subject": "Math",
+    "yearsTeaching": 4
+  },
+  {
+    "_id": {
+      "$oid": "6513180de03f0bdbbde3d1c2"
+    },
+    "faculty_id": 22,
+    "firstName": "Sarah",
+    "lastName": "Brink",
+    "email": "likestoteach@test.com",
+    "subject": "Art",
+    "yearsTeaching": 2
+  }
+]
