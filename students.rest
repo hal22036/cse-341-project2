@@ -6,15 +6,15 @@ GET http://localhost:3000/students
 GET http://localhost:3000/students/58e921f6028954d4f0778e7f
 
 ### Create student
-POST http:://localhost:3000/students HTTP/1.1
+POST http://localhost:3000/students HTTP/1.1
 content-type: application/json
 
 {
-    "student_id": 157,
-    "firstName": "Janet",
-    "lastName": "Smith",
-    "email": "student@test.com",
-    "birthday": "12/22/2011",
+    "student_id": 195,
+    "firstName": "Sandra",
+    "lastName": "Tester",
+    "email": "sandra@test.com",
+    "birthday": "4/12/2011",
     "gpa": 3.75
 }
 
@@ -39,12 +39,12 @@ content-type: application/json
     "student_id": 157,
     "firstName": "Janet",
     "lastName": "Smith",
-    "email": "student@test.com",
+    "email": "student@school.com",
     "birthday": "12/22/2011",
     "gpa": 3.75
 }
 
 ### DELETE student
-DELETE http://localhost:3000/students/58e921f6028954d4f0778e7f HTTP/1.1
+DELETE http://localhost:3000/students/65137e285552a5d6153413a5 HTTP/1.1
 
 

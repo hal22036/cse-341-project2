@@ -5,15 +5,13 @@ const objectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
     //#swagger.tags=['teachers']
     const result = await mongodb.getDatabase().db().collection('teachers').find()
-    result.toArray((err, teachers) => {
+    result.toArray().then((err, teachers) => {
         if (err) {
             res.status(400).json({ message: err });
-        }
-    // });
-    // result.toArray().then((teachers) => {
+        } else {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(teachers);
-    });
+}});
 };
 
 const getSingle = async (req, res) => {
@@ -23,15 +21,13 @@ const getSingle = async (req, res) => {
     }
     const teacherId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('teachers').find({_id: teacherId});
-    result.toArray((err, teachers) => {
+    result.toArray().then((err, teachers) => {
         if (err) {
             res.status(400).json({ message: err });
-        }
-    // });
-    // result.toArray().then((teachers) => {
+        } else {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(teachers[0]);
-    });
+}});
 };
 
 const createTeacher = async (req, res) => {

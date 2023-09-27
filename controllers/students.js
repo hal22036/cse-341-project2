@@ -2,18 +2,17 @@ const {ObjectId} = require('mongodb');
 const mongodb = require('../data/database');
 const objectId = require('mongodb').ObjectId;
 
+
 const getAll = async (req, res) => {
     //#swagger.tags=['students']
     const result = await mongodb.getDatabase().db().collection('students').find()
-    result.toArray((err, students) => {
+    result.toArray().then((err, students) => {
         if (err) {
             res.status(400).json({ message: err });
-        }
-    // });
-    // result.toArray().then((students) => {
+        } else {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(students);
-    });
+}});
 };
 
 const getSingle = async (req, res) => {
@@ -23,15 +22,13 @@ const getSingle = async (req, res) => {
     }
     const studentId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('students').find({_id: studentId});
-    result.toArray((err, students) => {
+    result.toArray().then((err, students) => {
         if (err) {
             res.status(400).json({ message: err });
-        }
-    // });
-    // result.toArray().then((students) => {
+        } else {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(students[0]);
-    });
+}});
 };
 
 const createStudent = async (req, res) => {

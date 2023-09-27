@@ -6,16 +6,16 @@ GET http://localhost:3000/teachers
 GET http://localhost:3000/teachers/651317eee03f0bdbbde3d1c1
 
 ### Create teacher
-POST http:://localhost:3000/teachers HTTP/1.1
+POST http://localhost:3000/teachers/ HTTP/1.1
 content-type: application/json
 
 {
-    "faculty_id": 12,
-    "firstName": "Jacob",
-    "lastName": "Mocker",
-    "email": "teacher@test.com",
-    "subject": "Math",
-    "yearsTeaching": 4
+    "faculty_id": 8,
+    "firstName": "Stephanie",
+    "lastName": "Jaimes",
+    "email": "bestteacher@test.com",
+    "subject": "Writing",
+    "yearsTeaching": 6
 }
 
 ### PUT teacher
@@ -26,13 +26,13 @@ content-type: application/json
     "faculty_id": 12,
     "firstName": "Jacob",
     "lastName": "Mocker",
-    "email": "teacher@test.com",
+    "email": "funteacher@test.com",
     "subject": "Math",
     "yearsTeaching": 4
 }
 
 ### DELETE teacher
-DELETE http://localhost:3000/teachers/651317eee03f0bdbbde3d1c1 HTTP/1.1
+DELETE http://localhost:3000/teachers/65137d545552a5d6153413a4 HTTP/1.1
 
 
 
