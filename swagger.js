@@ -5,8 +5,8 @@ const doc = {
         title: 'Students and Teacheres Api',
         description: 'Students and Teachers Api'
     },
-    host: 'localhost:3000',
-    schemes: ['http', 'https']
+    host: 'cse-341-project2-tcla.onrender.com',
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
