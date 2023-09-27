@@ -5,7 +5,7 @@ const objectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
     //#swagger.tags=['teachers']
     const result = await mongodb.getDatabase().db().collection('teachers').find()
-    result.toArray().then((err, teachers) => {
+    result.toArray().then((teachers, err) => {
         if (err) {
             res.status(400).json({ message: err });
         } else {
@@ -21,7 +21,7 @@ const getSingle = async (req, res) => {
     }
     const teacherId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('teachers').find({_id: teacherId});
-    result.toArray().then((err, teachers) => {
+    result.toArray().then((teachers, err) => {
         if (err) {
             res.status(400).json({ message: err });
         } else {

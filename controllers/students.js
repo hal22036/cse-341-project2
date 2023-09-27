@@ -4,12 +4,13 @@ const objectId = require('mongodb').ObjectId;
 
 
 const getAll = async (req, res) => {
-    //#swagger.tags=['students']
+    //#swagger.tags=['students'] 
     const result = await mongodb.getDatabase().db().collection('students').find()
-    result.toArray().then((err, students) => {
+    result.toArray().then((students, err) => {
+        
         if (err) {
             res.status(400).json({ message: err });
-        } else {
+        } else {        
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(students);
 }});
@@ -22,7 +23,7 @@ const getSingle = async (req, res) => {
     }
     const studentId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('students').find({_id: studentId});
-    result.toArray().then((err, students) => {
+    result.toArray().then((students, err) => {
         if (err) {
             res.status(400).json({ message: err });
         } else {
@@ -51,6 +52,7 @@ const createStudent = async (req, res) => {
 
 const updateStudent = async (req, res) => {
     //#swagger.tags=['students']
+    console.log('update student');
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid contact id to update a student.');
     }

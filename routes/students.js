@@ -2,17 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 const studentsController = require('../controllers/students');
-// const validation = require('../middleware/validate');
+const validation = require('../middleware/validate');
 
 router.get('/', studentsController.getAll);
 
 router.get('/:id', studentsController.getSingle);
 
-// router.post('/', validation.saveStudent, studentsController.createStudent);
-router.post('/', studentsController.createStudent);
+router.post('/', validation.saveStudent, studentsController.createStudent);
 
-// router.put('/:id', validation.saveStudent, studentsController.updateStudent);
-router.put('/:id', studentsController.updateStudent);
+router.put('/:id', validation.saveStudent, studentsController.updateStudent);
 
 router.delete('/:id', studentsController.deleteStudent);
 
