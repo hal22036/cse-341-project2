@@ -5,10 +5,10 @@ const objectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
   //#swagger.tags=['students']
   const result = await mongodb.getDatabase().db().collection('students').find();
-  result.toArray().then((teachers, err) => {
+  result.toArray().then((students, err) => {
     try {
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(teachers);
+      res.status(200).json(students);
     } catch (err) {
       res.status(400).json({ message: err });
     }
