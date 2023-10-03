@@ -44,7 +44,50 @@ const saveTeacher = (req, res, next) => {
         }
     });
 };
+
+const saveMenu = (req, res, next) => {
+    const validationRule = {
+        food_type: 'required|string',
+        name: 'required|string',
+        side: 'required|string', 
+        dessert: 'required|string'     
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+        if(!status) {
+            res.status(412).send({
+                success: false,
+                message: 'Validation failed',
+                data: err  
+            });
+        } else {
+            next();
+        }
+    });
+};
+
+const saveHolidays = (req, res, next) => {
+    const validationRule = {
+        holiday: 'required|string',
+        daysOffStart: 'required|string',
+        daysOffEnd: 'required|string'    
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+        if(!status) {
+            res.status(412).send({
+                success: false,
+                message: 'Validation failed',
+                data: err  
+            });
+        } else {
+            next();
+        }
+    });
+};
+
+
 module.exports = {
     saveStudent,
-    saveTeacher
+    saveTeacher,
+    saveMenu,
+    saveHolidays
 };

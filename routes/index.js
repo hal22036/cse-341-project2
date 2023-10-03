@@ -4,6 +4,8 @@ const passport = require('passport');
 router.use('/', require('./swagger'));
 router.use('/students', require('./students'));
 router.use('/teachers', require('./teachers'));
+router.use('/menu', require('./menu'));
+router.use('/holidays', require('./holidays'));
 
 // router.get('/', (req, res) => {
 //     //swagger.tags=['Jeni Hales']
